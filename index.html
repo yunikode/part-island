@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Part Island</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/robot-lung.css">
+	<link rel="stylesheet" href="dist/all.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<h1>Partial Hydration<br />&<br /> Island Architecture</h1>
+
+			</section>
+			<section>
+				<h2>1) Hydration</h2>
+				<h2>2) Partial Hydration</h2>
+				<h2>3) Islands</h2>
+			</section>
+			<section>
+				<section>
+					<h2>Hydration</h2>
+				</section>
+				<section>
+					<p>In web development, hydration or rehydration is a technique in which client-side JavaScript
+						converts a static HTML web page, delivered either through static hosting or server-side
+						rendering, into a dynamic web page by attaching event handlers to the HTML elements.</p>
+					<p><a href="https://ssr.vuejs.org/guide/hydration.html" target="_blank">"Client Side Hydration | Vue
+							SSR Guide"</a>. ssr.vuejs.org. Retrieved 2020-12-11.</p>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>Why not use SSR?</h2>
+					<ul></ul>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>Why not use SSR?</h2>
+					<ul>
+						<li>Fast <a href="https://web.dev/fcp/" target="_blank">First Contentful Paint</a></li>
+					</ul>
+
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>Why not use SSR?</h2>
+					<ul>
+						<li>Fast <a href="https://web.dev/fcp/" target="_blank">First Contentful Paint</a></li>
+						<li>"uncanny valley" to hide <a href="https://web.dev/tti/" target="_blank">Time To
+								Interactive</a></li>
+					</ul>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>Why not use SSR?</h2>
+					<ul>
+						<li>Fast <a href="https://web.dev/fcp/" target="_blank">First Contentful Paint</a></li>
+						<li>"uncanny valley" to hide <a href="https://web.dev/tti/" target="_blank">Time To
+								Interactive</a></li>
+						<li>Reduce bundle size</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Partial Hydration</h2>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>Types of Hydration</h2>
+					<h3>- Progressive rehydration</h3>
+					<h3>- Partial rehydration</h3>
+					<h3>- Streaming server-side rendering</h3>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>- Partial rehydration</h3>
+				</section>
+			</section>
+			<section>
+				<section>
+					<h2>Island Architecture</h2>
+				</section>
+				<section>
+					<p>tl;dr: The islands architecture encourages small, focused chunks of interactivity within
+						server-rendered web pages. The output of islands is progressively enhanced HTML, with more
+						specificity around how the enhancement occurs. Rather than a single application being in control
+						of full-page rendering, there are multiple entry points. The script for these "islands" of
+						interactivity can be delivered and hydrated independently, allowing the rest of the page to be
+						just static HTML.</p>
+					<p><a
+							href="https://www.patterns.dev/posts/islands-architecture/">https://www.patterns.dev/posts/islands-architecture</a>
+					</p>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>Setup</h2>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>Setup</h2>
+					<p>Start with a static page</p>
+				</section>
+
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>Setup</h2>
+					<p>Start with a static page</p>
+					<p>Add placeholder for interactive elements</p>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>Setup</h2>
+					<p>Start with a static page</p>
+					<p>Add placeholder for interactive elements</p>
+					<p>Wire up placeholder with functionality</p>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>Setup</h2>
+					<p>Start with a static page</p>
+					<p>Add placeholder for interactive elements</p>
+					<p>Wire up placeholder with functionality</p>
+					<p>Decide on loading strategy</p>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>Ready for take-off</h2>
+					<h2><i class="fa-solid fa-plane-departure"></i></h2>
+				</section>
+			</section>
+
+		</div>
+		<div class="line top"></div>
+		<div class="line bottom"></div>
+		<div class="line left"></div>
+		<div class="line right"></div>
+
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
