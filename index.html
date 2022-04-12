@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>Part Island</title>
+	<title>Partial Islands</title>
 
 	<link rel="stylesheet" href="dist/reset.css">
 	<link rel="stylesheet" href="dist/reveal.css">
@@ -40,18 +40,18 @@
 							SSR Guide"</a>. ssr.vuejs.org. Retrieved 2020-12-11.</p>
 				</section>
 				<section data-auto-animate data-auto-animate-unmatched="fade">
-					<h2>Why not use SSR?</h2>
+					<h2>Why use SSR?</h2>
 					<ul></ul>
 				</section>
 				<section data-auto-animate data-auto-animate-unmatched="fade">
-					<h2>Why not use SSR?</h2>
+					<h2>Why use SSR?</h2>
 					<ul>
 						<li>Fast <a href="https://web.dev/fcp/" target="_blank">First Contentful Paint</a></li>
 					</ul>
 
 				</section>
 				<section data-auto-animate data-auto-animate-unmatched="fade">
-					<h2>Why not use SSR?</h2>
+					<h2>Why use SSR?</h2>
 					<ul>
 						<li>Fast <a href="https://web.dev/fcp/" target="_blank">First Contentful Paint</a></li>
 						<li>"uncanny valley" to hide <a href="https://web.dev/tti/" target="_blank">Time To
@@ -59,7 +59,7 @@
 					</ul>
 				</section>
 				<section data-auto-animate data-auto-animate-unmatched="fade">
-					<h2>Why not use SSR?</h2>
+					<h2>Why use SSR?</h2>
 					<ul>
 						<li>Fast <a href="https://web.dev/fcp/" target="_blank">First Contentful Paint</a></li>
 						<li>"uncanny valley" to hide <a href="https://web.dev/tti/" target="_blank">Time To
@@ -67,19 +67,70 @@
 						<li>Reduce bundle size</li>
 					</ul>
 				</section>
-			</section>
-			<section>
-				<section>
-					<h2>Partial Hydration</h2>
-				</section>
 				<section data-auto-animate data-auto-animate-unmatched="fade">
 					<h2>Types of Hydration</h2>
 					<h3>- Progressive rehydration</h3>
 					<h3>- Partial rehydration</h3>
-					<h3>- Streaming server-side rendering</h3>
+					<h3>- Streaming server-side rendering<sup>*</sup></h3>
+				</section>
+			</section>
+			<section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>Partial rehydration</h3>
 				</section>
 				<section data-auto-animate data-auto-animate-unmatched="fade">
-					<h3>- Partial rehydration</h3>
+					<h3>What exactly is partial hydration</h3>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>What exactly is partial hydration</h3>
+					<p>Partial rehydration is an extension of the idea of progressive rehydration where individual pieces of a
+						server-rendered application are “booted up” over time.</p>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>What exactly is partial hydration</h3>
+					<p>Partial rehydration is an extension of the idea of progressive rehydration where individual pieces of a
+						server-rendered application are “booted up” over time.</p>
+					<p>This contrasts with the approach of initializing the entire application at once.</p>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h3>What exactly is partial hydration</h3>
+					<p>Lazy loading for components</p>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<img style="border: none; box-shadow: none;" src="./assets/hydrate.jpeg" alt="">
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>Complications</h2>
+					<p>- What about navigation?</p>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>Complications</h2>
+					<p>- What about navigation?</p>
+					<p>- How do we manage caching?</p>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>Complications</h2>
+					<p>- What about navigation?</p>
+					<p>- How do we manage caching?</p>
+					<p>- Application State?</p>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>Tools of the Trade</h2>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>Tools of the Trade</h2>
+					<p><i class="fa-solid fa-hammer"></i> React 18</p>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>Tools of the Trade</h2>
+					<p><i class="fa-solid fa-hammer"></i> React 18</p>
+					<p><i class="fa-solid fa-cart-shopping"></i> Marko</p>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>Tools of the Trade</h2>
+					<p><i class="fa-solid fa-hammer"></i> React 18</p>
+					<p><i class="fa-solid fa-cart-shopping"></i> Marko</p>
+					<p><i class="fa-solid fa-rocket"></i> Astro</p>
 				</section>
 			</section>
 			<section>
@@ -97,35 +148,74 @@
 							href="https://www.patterns.dev/posts/islands-architecture/">https://www.patterns.dev/posts/islands-architecture</a>
 					</p>
 				</section>
-				<section data-auto-animate data-auto-animate-unmatched="fade">
-					<h2>Setup</h2>
+				<section>
+					<h2>Comparison</h2>
+					<img src="./assets/ssr-island.png" alt="">
+					<p>Image: Patterns.dev</p>
 				</section>
 				<section data-auto-animate data-auto-animate-unmatched="fade">
-					<h2>Setup</h2>
+					<h2>So Partial Hydration?</h2>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>So Partial Hydration?</h2>
+					<p>Yes, but not only!</p>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>What can we use?</h2>
+
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>What can we use?</h2>
+					<p>Streaming</p>
+
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>What can we use?</h2>
+					<p>Streaming</p>
+					<p>Module Federation</p>
+
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>What can we use?</h2>
+					<p>Streaming</p>
+					<p>Module Federation</p>
+					<p>Mixing Frameworks</p>
+				</section>
+
+			</section>
+			<section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>4 Simple Steps</h2>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>4 Simple Steps</h2>
 					<p>Start with a static page</p>
 				</section>
 
 				<section data-auto-animate data-auto-animate-unmatched="fade">
-					<h2>Setup</h2>
+					<h2>4 Simple Steps</h2>
 					<p>Start with a static page</p>
 					<p>Add placeholder for interactive elements</p>
 				</section>
 				<section data-auto-animate data-auto-animate-unmatched="fade">
-					<h2>Setup</h2>
+					<h2>4 Simple Steps</h2>
 					<p>Start with a static page</p>
 					<p>Add placeholder for interactive elements</p>
-					<p>Wire up placeholder with functionality</p>
-				</section>
-				<section data-auto-animate data-auto-animate-unmatched="fade">
-					<h2>Setup</h2>
-					<p>Start with a static page</p>
-					<p>Add placeholder for interactive elements</p>
-					<p>Wire up placeholder with functionality</p>
 					<p>Decide on loading strategy</p>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>4 Simple Steps</h2>
+					<p>Start with a static page</p>
+					<p>Add placeholder for interactive elements</p>
+					<p>Decide on loading strategy</p>
+					<p>Wire up placeholder with functionality</p>
 				</section>
 				<section data-auto-animate data-auto-animate-unmatched="fade">
 					<h2>Ready for take-off</h2>
 					<h2><i class="fa-solid fa-plane-departure"></i></h2>
+				</section>
+				<section data-auto-animate data-auto-animate-unmatched="fade">
+					<h2>As simple as rocketsurgery</h2>
 				</section>
 			</section>
 
